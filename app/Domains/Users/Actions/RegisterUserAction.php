@@ -19,7 +19,7 @@ class RegisterUserAction
             'email' => ['required', 'email', 'unique:users,email'],
             'name' => ['required', 'string', 'max:32'],
             'lastname' => ['required', 'string', 'max:32'],
-            'password' => ['required', 'confirmed', Password::min(8)->mixedCase()->symbols()],
+            'password' => ['required', 'confirmed', Password::min(6)],
             'password_confirmation' => ['required'],
         ];
     }
