@@ -19,6 +19,6 @@ class GetLocationRoutesAction
 
     public function handle(Location $location): Collection
     {
-        return $location->routes()->with('endLocation')->get();
+        return $location->routes()->with(['endLocation', 'startLocation'])->get();
     }
 }
