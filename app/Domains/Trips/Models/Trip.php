@@ -4,7 +4,9 @@ namespace App\Domains\Trips\Models;
 
 use App\Domains\Routes\Models\Route;
 use App\Domains\Tickets\Models\Ticket;
+use App\Domains\Trips\Observers\TripObserver;
 use App\Domains\Vehicles\Models\Vehicle;
+use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
@@ -14,6 +16,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 /**
  * @mixin IdeHelperTrip
  */
+#[ObservedBy(TripObserver::class)]
 class Trip extends Model
 {
     protected $fillable = [

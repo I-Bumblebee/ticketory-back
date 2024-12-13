@@ -13,7 +13,6 @@ class DatabaseSeeder extends Seeder
             RouteSeeder::class,
             VehicleSeeder::class,
             TripSeeder::class,
-            TicketSeeder::class,
         ]);
     }
 }
